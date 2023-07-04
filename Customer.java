@@ -2,35 +2,60 @@ package com.example.part_02;
 
 import java.util.Scanner;
 
-public class Customer{
+public class Customer {
 
-    private String firstName;
-    private String lastName;
-    private int burgerCount;
+    /**
+     * creating customer attributes as first name, last name and burger count.
+     */
+    private final String customerFName;
+    private final String customerLName;
+    private final String burgerCount;
 
-    public void Cusomter(){
-
+    /**
+     * default constractor
+     */
+    public Customer(){
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter first name of the customer: ");
-        this.firstName = scanner.nextLine();
+        System.out.print("Enter first name: ");
+        this.customerFName = scanner.nextLine();
 
-        System.out.print("Enter last name of the customer: ");
-        this.lastName = scanner.nextLine();
+        System.out.print("Enter last name: ");
+        this.customerLName = scanner.nextLine();
 
-        System.out.print("Enter the ordered burger count: ");
-        this.burgerCount = scanner.nextInt();
-
-        scanner.close();
-
+        System.out.print("Enter burger count: ");
+        this.burgerCount = scanner.nextLine();
     }
 
+    /**
+     * getter for getting customer full name.
+     * @return
+     */
     public String getFullName(){
-        return firstName + " " + lastName;
+        return customerFName + " " + customerLName;
     }
 
-    public int getNumberOfBurgers(){
+    /**
+     * getter for getting customer first name.
+     * @return
+     */
+    public String getCustomerFName() {
+        return customerFName;
+    }
+
+    /**
+     * getter for getting customer last name.
+     * @return
+     */
+    public String getCustomerLName() {
+        return customerLName;
+    }
+
+    /**
+     * getter for getting burget count.
+     * @return
+     */
+    public String getBurgerCount() {
         return burgerCount;
     }
-
 }
