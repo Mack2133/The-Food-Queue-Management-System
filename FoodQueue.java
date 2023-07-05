@@ -3,10 +3,7 @@ package com.example.part_02;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.util.*;
 
 public class FoodQueue {
 
@@ -21,7 +18,7 @@ public class FoodQueue {
 
    static int burgerStock = 40;  // burger stock.
    private String[] customerNameList = new String[10];  // sorted customer name list.
-   private ArrayList<String> waitingList = new ArrayList<String>(); // waiting list.
+   private ArrayList<String> waitingList = new ArrayList<>(); // waiting list.
 
 
    /**
@@ -255,7 +252,7 @@ public class FoodQueue {
                if (allCashiers[i][j].equals("X")) {
                   allCashiers[i][j] = "O";
                   int cashierPosition = i + j;
-                  customerNameList[cashierPosition] = "Customer: " + customer.getFullName() + " - Ordered burger count: " + customer.getBurgerCount();
+                  customerNameList[cashierPosition] = "Customer: " + customer.getFullName() + " - Ordered burger count: " + customer.getBurgerCount() + "\n";
                   customerAdded = true;
                   break;
                }
@@ -294,5 +291,12 @@ public class FoodQueue {
          burgerStock += addBurgerCount;
          System.out.println(addBurgerCount + " burgers added to the existing stock.");
       }
+   }
+
+   /**
+    * creating a Mehthod to add customers to the Queue/Cashier from the waiting list.
+    */
+   private void (){
+
    }
 }
