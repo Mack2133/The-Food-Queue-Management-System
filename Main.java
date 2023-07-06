@@ -26,6 +26,7 @@ public class Main {
                 "AFS or 109 : Add burgers to Stock.",
                 "IFQ or 110 : Income of each queue.",
                 "EXT or 999 : Exit the Program."
+
         };
 
         for (String option : allOptionsList) {

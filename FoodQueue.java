@@ -296,7 +296,5 @@ public class FoodQueue {
    /**
     * creating a Mehthod to add customers to the Queue/Cashier from the waiting list.
     */
-   private void (){
 
-   }
 }
