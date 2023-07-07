@@ -20,6 +20,25 @@ public class FoodQueue {
    private String[] customerNameList = new String[10];  // sorted customer name list.
    private ArrayList<String> waitingList = new ArrayList<>(); // waiting list.
 
+   public static String[] getCashier01() {
+      return cashier01;
+   }
+
+   public static String[] getCashier02() {
+      return cashier02;
+   }
+
+   public static String[] getCashier03() {
+      return cashier03;
+   }
+
+   public String[][] getAllCashiers() {
+      return allCashiers;
+   }
+
+   public void setBurgerStock(int burgerStock) {
+      FoodQueue.burgerStock = burgerStock;
+   }
 
    /**
     * getter Method to get the burgers stock.
@@ -111,37 +130,6 @@ public class FoodQueue {
       }
       System.out.println(); // to make a space between codes.
       System.out.println("X – Not Occupied");
-   }
-
-   /**
-    * Method to remove a customer from a Queue/Cahier.
-    */
-   public void removeCustomerFromQueue() {
-
-      Scanner scanner = new Scanner(System.in);
-
-      try {
-         System.out.print("Enter the cashier number: ");
-         int cashierNumber = scanner.nextInt() - 1;
-
-         System.out.print("Enter the cashier spot: ");
-         int cashierSpot = scanner.nextInt() - 1;
-
-         if (cashierNumber >= 0 && cashierNumber < 3 && cashierSpot >= 0 && cashierSpot < allCashiers[cashierNumber].length) {
-            if (allCashiers[cashierNumber][cashierSpot].equals("O")) {
-               allCashiers[cashierNumber][cashierSpot] = "X";
-               System.out.println("Customer was successfully removed.");
-               movingCustomers();
-            } else {
-               System.out.println("There is no customer to remove.");
-            }
-         } else {
-            System.out.println("Please enter a valid input.");
-         }
-
-      } catch (InputMismatchException ex) {
-         System.out.println("Please enter an integer value.");
-      }
    }
 
    /**
@@ -293,8 +281,5 @@ public class FoodQueue {
       }
    }
 
-   /**
-    * creating a Mehthod to add customers to the Queue/Cashier from the waiting list.
-    */
 
 }

@@ -56,10 +56,14 @@ public class Main {
                     }
 
                     case "RCQ", "103" -> {
-                        foodQueue.removeCustomerFromQueue();
+                        RemoveCustomerFromQueue removeCustomerFromQueue = new RemoveCustomerFromQueue();
+                        removeCustomerFromQueue.removeCustomerFromQueue();
                     }
 
-                    case "RSC", "104" -> {}
+                    case "RSC", "104" -> {
+                        RemoveServedCustomer removeServedCustomer = new RemoveServedCustomer();
+                        removeServedCustomer.removeServedCustomer();
+                    }
 
                     case "VCS", "105" -> {}
 
