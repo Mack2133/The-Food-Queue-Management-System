@@ -4,11 +4,12 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
+import java.util.Arrays;
 
 public class FoodQueue {
 
    /**
-    * creating attributes for cashiers, burger stock, customer name list, waiting list.
+    * creating attributes for cashiers, burger stock, customer name list, waiting list, getters and setters.
     */
    private static String[] cashier01 = {"O", "O"};
    private static String[] cashier02 = {"O", "O", "O"};
@@ -16,7 +17,7 @@ public class FoodQueue {
 
    private String[][] allCashiers = {cashier01, cashier02, cashier03};
 
-   static int burgerStock = 40;  // burger stock.
+   private int burgerStock = 40;  // burger stock.
    private String[] customerNameList = new String[10];  // sorted customer name list.
    private ArrayList<String> waitingList = new ArrayList<>(); // waiting list.
 
@@ -37,7 +38,11 @@ public class FoodQueue {
    }
 
    public void setBurgerStock(int burgerStock) {
-      FoodQueue.burgerStock = burgerStock;
+      this.burgerStock = burgerStock;
+   }
+
+   public int getBurgerStock() {
+      return burgerStock;
    }
 
    /**
@@ -281,5 +286,21 @@ public class FoodQueue {
       }
    }
 
+   /**
+    * Mehtod to sort customer names alphabatically.
+    */
+   public void sortCustomerNameList() {
 
+      Arrays.fill(customerNameList,"");
+      Arrays.sort(customerNameList);
+
+      // Print the sorted customer names
+      System.out.println("Sorted Customer Names:");
+      for (String name : customerNameList) {
+         if (name != "" && !name.isEmpty()) {
+            System.out.println(name);
+         }
+      }
+   }
 }
+

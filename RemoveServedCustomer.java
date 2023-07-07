@@ -8,6 +8,10 @@ public class RemoveServedCustomer extends RemoveCustomerFromQueue{
      * when ever a served customer removed from the Cashier/Queue it will be counted as a purchase.
      */
     public void removeServedCustomer() {
+
+        RemoveCustomerFromQueue removeCustomerFromQueue = new RemoveCustomerFromQueue();
+        removeCustomerFromQueue.removeCustomerFromQueue();
+
         foodQueue.setBurgerStock(foodQueue.getBurgetStock() - 5);
     }
 }
