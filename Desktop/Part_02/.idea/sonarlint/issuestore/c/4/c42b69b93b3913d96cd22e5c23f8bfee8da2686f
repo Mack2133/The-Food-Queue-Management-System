@@ -1,0 +1,8 @@
+
+U	java:S106"9Replace this use of System.out or System.err by a logger.(¹Åç8è“•‘1
+L
+java:S1068	"/Remove this unused "allCashiers" private field.(’Óã8í“•‘1
+L
+java:S1068"/Remove this unused "burgerStock" private field.(“Ø¹8í“•‘1
+V
+java:S1068"4Remove this unused "customerNameList" private field.(ãÕë‹ûÿÿÿÿ8í“•‘1

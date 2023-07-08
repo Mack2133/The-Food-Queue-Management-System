@@ -1,0 +1,6 @@
+Cashier 01: O, O
+Cashier 02: O, O, O
+Cashier 03: O, O, O, O, O
+Customer Names: , , , , , , , , , 
+Waiting List: 
+Remaining burger stock: 40

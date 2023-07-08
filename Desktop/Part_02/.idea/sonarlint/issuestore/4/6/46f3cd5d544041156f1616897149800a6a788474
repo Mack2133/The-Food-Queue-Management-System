@@ -1,0 +1,85 @@
+
+n
+java:S1192Ú"QDefine a constant instead of duplicating this literal "Program_Data.txt" 4 times.(­«¨K8–áŒ‘1
+t
+java:S1192p"RDefine a constant instead of duplicating this literal "*****************" 4 times.(Ÿ‰û§şÿÿÿÿ8—áŒ‘1
+g
+java:S1192˜"IDefine a constant instead of duplicating this literal "X       " 3 times.(¡ô‹‡8—áŒ‘1
+e
+java:S1192x"HDefine a constant instead of duplicating this literal "       " 3 times.(èÑŸê8—áŒ‘1
+f
+java:S1192z"IDefine a constant instead of duplicating this literal "        " 9 times.(×•œ²8—áŒ‘1
+k
+java:S2095ã"HUse try-with-resources or close this "FileWriter" in a "finally" clause.(Ê£–ıÿÿÿÿ8¼äŒ‘1
+U	java:S106("9Replace this use of System.out or System.err by a logger.(ÒˆÏş8ÂäŒ‘1
+U	java:S106,"9Replace this use of System.out or System.err by a logger.(³´ªÏ8ÂäŒ‘1
+Z	java:S1061"9Replace this use of System.out or System.err by a logger.(äÜ–§ûÿÿÿÿ8ÄäŒ‘1
+9
+java:S62059"Remove this redundant block.(ÛÕÊá8ÅäŒ‘1
+>
+java:S6205<"Remove this redundant block.(ˆõÙ¦øÿÿÿÿ8ÆäŒ‘1
+>
+java:S6205C"Remove this redundant block.(Ä–¹çùÿÿÿÿ8ÆäŒ‘1
+9
+java:S6205J"Remove this redundant block.(ÚÏõ¥8ÇäŒ‘1
+9
+java:S6205M"Remove this redundant block.(î¬â¯8ÇäŒ‘1
+>
+java:S6205P"Remove this redundant block.(ê¶‰™şÿÿÿÿ8ÇäŒ‘1
+8
+java:S6205S"Remove this redundant block.(ßîÛa8ÇäŒ‘1
+U	java:S106T"9Replace this use of System.out or System.err by a logger.(Ãàä’8ÇäŒ‘1
+Z	java:S106Y"9Replace this use of System.out or System.err by a logger.(şÆäşÿÿÿÿ8ÈäŒ‘1
+U	java:S106]"9Replace this use of System.out or System.err by a logger.(‘‘á…8ÈäŒ‘1
+U	java:S106`"9Replace this use of System.out or System.err by a logger.(îÔ’¢8ÉäŒ‘1
+9
+java:S6205d"Remove this redundant block.(üØô8ÉäŒ‘1
+U	java:S106e"9Replace this use of System.out or System.err by a logger.(Ç—ûß8ÉäŒ‘1
+Z	java:S106p"9Replace this use of System.out or System.err by a logger.(Ÿ‰û§şÿÿÿÿ8ÊäŒ‘1
+Z	java:S106q"9Replace this use of System.out or System.err by a logger.(‹›õ¨úÿÿÿÿ8ÊäŒ‘1
+Z	java:S106r"9Replace this use of System.out or System.err by a logger.(Ÿ‰û§şÿÿÿÿ8ÊäŒ‘1
+U	java:S106x"9Replace this use of System.out or System.err by a logger.(èÑŸê8ËäŒ‘1
+U	java:S106z"9Replace this use of System.out or System.err by a logger.(×•œ²8ËäŒ‘1
+Z	java:S106}"9Replace this use of System.out or System.err by a logger.(ç™æ—şÿÿÿÿ8ËäŒ‘1
+U	java:S106"9Replace this use of System.out or System.err by a logger.(×•œ²8ËäŒ‘1
+V	java:S106‚"9Replace this use of System.out or System.err by a logger.(ÙôÚ8ËäŒ‘1
+V	java:S106„"9Replace this use of System.out or System.err by a logger.(×•œ²8ËäŒ‘1
+[	java:S106†"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8ÌäŒ‘1
+U	java:S106ˆ"9Replace this use of System.out or System.err by a logger.(¿¹İS8ÌäŒ‘1
+[	java:S106‰"9Replace this use of System.out or System.err by a logger.(¹¬Ù‚üÿÿÿÿ8ÌäŒ‘1
+p
+java:S3776Œ"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(Ïµ«”8ÌäŒ‘1
+[	java:S106"9Replace this use of System.out or System.err by a logger.(Ÿ‰û§şÿÿÿÿ8ÍäŒ‘1
+[	java:S106‘"9Replace this use of System.out or System.err by a logger.(‹›õ¨úÿÿÿÿ8ÍäŒ‘1
+[	java:S106’"9Replace this use of System.out or System.err by a logger.(Ÿ‰û§şÿÿÿÿ8ÍäŒ‘1
+V	java:S106˜"9Replace this use of System.out or System.err by a logger.(¡ô‹‡8ÎäŒ‘1
+V	java:S106š"9Replace this use of System.out or System.err by a logger.(×•œ²8ÎäŒ‘1
+V	java:S106"9Replace this use of System.out or System.err by a logger.(×•œ²8ÎäŒ‘1
+V	java:S106¢"9Replace this use of System.out or System.err by a logger.(¡ô‹‡8ÎäŒ‘1
+V	java:S106¤"9Replace this use of System.out or System.err by a logger.(×•œ²8ÎäŒ‘1
+V	java:S106§"9Replace this use of System.out or System.err by a logger.(×•œ²8ÎäŒ‘1
+V	java:S106¬"9Replace this use of System.out or System.err by a logger.(¡ô‹‡8ÏäŒ‘1
+V	java:S106®"9Replace this use of System.out or System.err by a logger.(×•œ²8ÏäŒ‘1
+V	java:S106±"9Replace this use of System.out or System.err by a logger.(×•œ²8ÏäŒ‘1
+[	java:S106´"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8ÏäŒ‘1
+U	java:S106¶"9Replace this use of System.out or System.err by a logger.(¿¹İS8ÏäŒ‘1
+[	java:S106·"9Replace this use of System.out or System.err by a logger.(”ëñ¼şÿÿÿÿ8ÏäŒ‘1
+V	java:S106Á"9Replace this use of System.out or System.err by a logger.(‹°³€8ĞäŒ‘1
+[	java:S106Ä"9Replace this use of System.out or System.err by a logger.(èû¨Úıÿÿÿÿ8ÑäŒ‘1
+V	java:S106Ê"9Replace this use of System.out or System.err by a logger.(»ø»ä8ÒäŒ‘1
+V	java:S106Í"9Replace this use of System.out or System.err by a logger.(ß…È8ÒäŒ‘1
+[	java:S106Ğ"9Replace this use of System.out or System.err by a logger.(÷ª¥™ûÿÿÿÿ8ÒäŒ‘1
+U	java:S106Ô"9Replace this use of System.out or System.err by a logger.(õ‘î
+8ÒäŒ‘1
+]	java:S899Û";Do something with the "boolean" value returned by "delete".(åóçØúÿÿÿÿ8ÕäŒ‘1
+q
+java:S4042Û"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(åóçØúÿÿÿÿ8ÕäŒ‘1
+U	java:S106â"9Replace this use of System.out or System.err by a logger.(ñ¸Àb8ÕäŒ‘1
+V	java:S106í"9Replace this use of System.out or System.err by a logger.(ÑŠ®Ò8×äŒ‘1
+V	java:S106ñ"9Replace this use of System.out or System.err by a logger.(Àûå 8×äŒ‘1
+[	java:S106ş"9Replace this use of System.out or System.err by a logger.(É•©·ùÿÿÿÿ8ØäŒ‘1
+U	java:S106‚"9Replace this use of System.out or System.err by a logger.(ØÌ„Q8ØäŒ‘1
+V	java:S106ˆ"9Replace this use of System.out or System.err by a logger.(Àûå 8ØäŒ‘1
+V	java:S106–"9Replace this use of System.out or System.err by a logger.(ÕõïÕ8ÙäŒ‘1
+â
+java:S6541"ÄA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 77 to 64, Complexity from 17 to 14, Nesting Level from 4 to 2, Number of Variables from 8 to 6.(Çµí‘8ÛäŒ‘1
