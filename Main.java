@@ -85,7 +85,9 @@ public class Main {
                         foodQueue.addBurgersToStock();
                     }
 
-                    case "IFQ or 110" -> {}
+                    case "IFQ", "110" -> {
+                        foodQueue.cashierIncome();
+                    }
 
                     default -> {
                         System.out.println("Enter a valid input.");

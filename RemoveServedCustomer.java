@@ -2,6 +2,22 @@ package com.example.part_02;
 
 public class RemoveServedCustomer extends RemoveCustomerFromQueue{
 
+    private int cashier01Revenue;
+    private int cashier02Revenue;
+    private int cashier03Revenue;
+
+    public int getCashier01Revenue() {
+        return cashier01Revenue * 650;
+    }
+
+    public int getCashier02Revenue() {
+        return cashier02Revenue * 650;
+    }
+
+    public int getCashier03Revenue() {
+        return cashier03Revenue * 650;
+    }
+
     /**
      * Method to calculate the income of each Queue/Cashier.
      * burger cost will be taken as 650 for each.
@@ -13,5 +29,23 @@ public class RemoveServedCustomer extends RemoveCustomerFromQueue{
         removeCustomerFromQueue.removeCustomerFromQueue();
 
         foodQueue.setBurgerStock(foodQueue.getBurgetStock() - 5);
+
+//        if(removeCustomerFromQueue.customerRemoved){
+//            switch (removeCustomerFromQueue.cashierNumber){
+//                case 0 -> cashier01Revenue++;
+//                case 1 -> cashier02Revenue++;
+//                case 2 -> cashier03Revenue++;
+//            }
+//        }
+
+        if(customerRemoved){
+            if(cashierNumber == 0) cashier01Revenue++;
+            else if(cashierNumber == 1) cashier02Revenue++;
+            else if(cashierNumber == 3) cashier03Revenue++;
+        }
+
+        cashier01Revenue = this.cashier01Revenue;
+        cashier02Revenue = this.cashier02Revenue;
+        cashier03Revenue = this.cashier03Revenue;
     }
 }

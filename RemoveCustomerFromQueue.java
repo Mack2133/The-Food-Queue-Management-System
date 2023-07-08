@@ -7,14 +7,15 @@ public class RemoveCustomerFromQueue {
 
     FoodQueue foodQueue = new FoodQueue();
     Scanner scanner = new Scanner(System.in);
-
+    int cashierNumber;
+    boolean customerRemoved = false;
     /**
      * Method to remove a customer from a Queue/Cashier.
      */
     public void removeCustomerFromQueue() {
         try {
             System.out.print("Enter the cashier number: ");
-            int cashierNumber = scanner.nextInt() - 1;
+            cashierNumber = scanner.nextInt() - 1;
 
             System.out.print("Enter the cashier spot: ");
             int cashierSpot = scanner.nextInt() - 1;
@@ -22,6 +23,7 @@ public class RemoveCustomerFromQueue {
             if (cashierNumber >= 0 && cashierNumber < 3 && cashierSpot >= 0 && cashierSpot < foodQueue.getAllCashiers()[cashierNumber].length) {
                 if (foodQueue.getAllCashiers()[cashierNumber][cashierSpot].equals("O")) {
                     foodQueue.getAllCashiers()[cashierNumber][cashierSpot] = "X";
+                    customerRemoved = true;
                     System.out.println("Customer was successfully removed.");
                     foodQueue.movingCustomers();
                 } else {

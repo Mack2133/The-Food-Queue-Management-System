@@ -246,6 +246,7 @@ public class FoodQueue {
                   allCashiers[i][j] = "O";
                   int cashierPosition = i + j;
                   customerNameList[cashierPosition] = "Customer: " + customer.getFullName() + " - Ordered burger count: " + customer.getBurgerCount() + "\n";
+                  System.out.println("Customer successfully added to the cashier");
                   customerAdded = true;
                   break;
                }
@@ -302,5 +303,19 @@ public class FoodQueue {
          }
       }
    }
-}
 
+   /**
+    * Method to calculate the income of each Queue/Cashier.
+    */
+   public void cashierIncome (){
+
+      RemoveServedCustomer removeServedCustomer = new RemoveServedCustomer();
+
+      System.out.println("Cashier 01: " + removeServedCustomer.getCashier01Revenue() + "\n" +
+              "Cashier 02: " + removeServedCustomer.getCashier02Revenue() + "\n" +
+              "Cashier 03: " + removeServedCustomer.getCashier03Revenue());
+
+
+   }
+
+}
