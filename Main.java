@@ -8,7 +8,7 @@ public class Main {
         FoodQueue foodQueue = new FoodQueue();
 
         // warning message if the stock of the burgers went lower than 10 pieces.
-        if (foodQueue.getBurgetStock() < 10) {
+        if (foodQueue.getBurgerStock() < 10) {
             System.out.println("Burger count is going less than 10.Please refill.");
         }
 
@@ -60,7 +60,7 @@ public class Main {
                     }
 
                     case "RSC", "104" -> {
-
+                        foodQueue.removeServedCustomer();
                     }
 
                     case "VCS", "105" -> {

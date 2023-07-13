@@ -20,36 +20,11 @@ public class FoodQueue {
 
    private int burgerStock = 40;  // burger stock.
    private String[] customerNameList = new String[10];  // sorted customer name list.
-   private ArrayList<Customer> waitingList = new ArrayList<>(); // waiting list.
-
-   public static String[] getCashier01() {
-      return cashier01;
-   }
-
-   public static String[] getCashier02() {
-      return cashier02;
-   }
-
-   public static String[] getCashier03() {
-      return cashier03;
-   }
-
-   public String[][] getAllCashiers() {
-      return allCashiers;
-   }
-
-   public void setBurgerStock(int burgerStock) {
-      this.burgerStock = burgerStock;
-   }
-
-   public int getBurgerStock() {
-      return burgerStock;
-   }
 
    /**
     * getter Method to get the burgers stock.
     */
-   public int getBurgetStock(){
+   public int getBurgerStock(){
       return burgerStock;
    }
 
@@ -141,10 +116,8 @@ public class FoodQueue {
     * Method to save data into a separate file named Program_Data.txt.
     */
    public void saveDate() {
-      // converting Arraylist into an array in order to use testing method.
-      String[] arrayWaitingList = waitingList.toArray(new String[waitingList.size()]);
 
-      Arrays.fill(customerNameList, "");
+      CircularQ circularQ = new CircularQ();
 
       File fileDelete = new File("Program_Data.txt");
       fileDelete.delete();
@@ -163,7 +136,7 @@ public class FoodQueue {
 
             fileWriter.write("Customer Names: " + Arrays.toString(customerNameList).replace("[", "").replace("]", "") + "\n");
 
-            fileWriter.write("Waiting List: " + Arrays.toString(arrayWaitingList).replace("[", "").replace("]", "") + "\n");
+            fileWriter.write("Waiting List: " + circularQ.getWaitingList() + "\n");
 
             fileWriter.write("Remaining burger stock: " + burgerStock + "\n");
             fileWriter.close();
@@ -261,7 +234,8 @@ public class FoodQueue {
       }
 
       // If no empty space is available, add the customer to the waitingList
-      waitingList.add(customer);
+      CircularQ circularQ = new CircularQ();
+      circularQ.enqueue(customer);
       System.out.println("Customer added to the waiting list.");
    }
 
@@ -282,7 +256,7 @@ public class FoodQueue {
       int addBurgerCount = addBurger.nextInt();
 
       if (addBurgerCount + burgerStock > 50) {
-         System.out.println("Burger count can't be exceded total of 50.");
+         System.out.println("Burger count can't be exceeded total of 50.");
       } else {
          burgerStock += addBurgerCount;
          System.out.println(addBurgerCount + " burgers added to the existing stock.");
@@ -311,11 +285,6 @@ public class FoodQueue {
     */
    public void cashierIncome (){
 
-      RemoveServedCustomer removeServedCustomer = new RemoveServedCustomer();
-
-      System.out.println("Cashier 01: " + removeServedCustomer.getCashier01Revenue() + "\n" +
-              "Cashier 02: " + removeServedCustomer.getCashier02Revenue() + "\n" +
-              "Cashier 03: " + removeServedCustomer.getCashier03Revenue());
    }
 
    /**
@@ -334,9 +303,22 @@ public class FoodQueue {
 
          if (cashierNumber >= 0 && cashierNumber < 3 && cashierSpot >= 0 && cashierSpot < allCashiers[cashierNumber].length) {
             if (allCashiers[cashierNumber][cashierSpot].equals("O")) {
+
                allCashiers[cashierNumber][cashierSpot] = "X";
                System.out.println("Customer was successfully removed.");
                movingCustomers();
+
+               CircularQ circularQ = new CircularQ();
+               circularQ.dequeue();
+
+               if(cashierNumber == 0){
+                  allCashiers[cashierNumber][1] = "O";
+               } else if(cashierNumber == 1){
+                  allCashiers[cashierNumber][2] = "O";
+               } else if (cashierNumber == 2){
+                  allCashiers[cashierNumber][4] = "O";
+               }
+
             } else {
                System.out.println("There is no customer to remove.");
             }
@@ -370,9 +352,13 @@ public class FoodQueue {
             if(cashierNumberInput == 0){
                allCashiers[cashierNumberInput][0] = "X";
                System.out.println("Customer successfully removed from cashier number " + (cashierNumberInput + 1));
+
                movingCustomers();
                int lastElement = allCashiers[cashierNumberInput].length - 1;
-               allCashiers[cashierNumberInput][lastElement] =
+               CircularQ circularQ = new CircularQ();
+               allCashiers[cashierNumberInput][lastElement] = String.valueOf(circularQ.getFCWaitingList());
+               circularQ.dequeue();
+               burgerStock += addBurgerCount;
                break;
             }
          } else{
@@ -384,7 +370,7 @@ public class FoodQueue {
    /**
     * Method to move customers to the front position when it is empty.
     */
-   public void movingCustomers() {
+   private void movingCustomers() {
       for (int i = 0; i < cashier01.length - 1; i++) {
          if (cashier01[i].equals("X") && cashier01[i + 1].equals("O")) {
             cashier01[i] = "O";
