@@ -3,15 +3,13 @@ package com.example.part_02;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.Arrays;
-import java.util.InputMismatchException;
-import java.util.Scanner;
 
 public class FoodQueue {
 
    /**
-    * creating attributes for cashiers, burger stock, customer name list, waiting list.
+    * creating attributes for cashiers, burger stock, customer name list, waiting list, getters and setters.
     */
    private static String[] cashier01 = {"O", "O"};
    private static String[] cashier02 = {"O", "O", "O"};
@@ -19,10 +17,33 @@ public class FoodQueue {
 
    private String[][] allCashiers = {cashier01, cashier02, cashier03};
 
-   static int burgerStock = 40;  // burger stock.
+   private int burgerStock = 40;  // burger stock.
    private String[] customerNameList = new String[10];  // sorted customer name list.
-   private ArrayList<String> waitingList = new ArrayList<String>(); // waiting list.
+   private ArrayList<String> waitingList = new ArrayList<>(); // waiting list.
 
+   public static String[] getCashier01() {
+      return cashier01;
+   }
+
+   public static String[] getCashier02() {
+      return cashier02;
+   }
+
+   public static String[] getCashier03() {
+      return cashier03;
+   }
+
+   public String[][] getAllCashiers() {
+      return allCashiers;
+   }
+
+   public void setBurgerStock(int burgerStock) {
+      this.burgerStock = burgerStock;
+   }
+
+   public int getBurgerStock() {
+      return burgerStock;
+   }
 
    /**
     * getter Method to get the burgers stock.
@@ -114,37 +135,6 @@ public class FoodQueue {
       }
       System.out.println(); // to make a space between codes.
       System.out.println("X – Not Occupied");
-   }
-
-   /**
-    * Method to remove a customer from a Queue/Cahier.
-    */
-   public void removeCustomerFromQueue() {
-
-      Scanner scanner = new Scanner(System.in);
-
-      try {
-         System.out.print("Enter the cashier number: ");
-         int cashierNumber = scanner.nextInt() - 1;
-
-         System.out.print("Enter the cashier spot: ");
-         int cashierSpot = scanner.nextInt() - 1;
-
-         if (cashierNumber >= 0 && cashierNumber < 3 && cashierSpot >= 0 && cashierSpot < allCashiers[cashierNumber].length) {
-            if (allCashiers[cashierNumber][cashierSpot].equals("O")) {
-               allCashiers[cashierNumber][cashierSpot] = "X";
-               System.out.println("Customer was successfully removed.");
-               movingCustomers();
-            } else {
-               System.out.println("There is no customer to remove.");
-            }
-         } else {
-            System.out.println("Please enter a valid input.");
-         }
-
-      } catch (InputMismatchException ex) {
-         System.out.println("Please enter an integer value.");
-      }
    }
 
    /**
@@ -255,7 +245,7 @@ public class FoodQueue {
                if (allCashiers[i][j].equals("X")) {
                   allCashiers[i][j] = "O";
                   int cashierPosition = i + j;
-                  customerNameList[cashierPosition] = "Customer: " + customer.getFullName() + " - Ordered burger count: " + customer.getBurgerCount();
+                  customerNameList[cashierPosition] = "Customer: " + customer.getFullName() + " - Ordered burger count: " + customer.getBurgerCount() + "\n";
                   customerAdded = true;
                   break;
                }
@@ -295,4 +285,22 @@ public class FoodQueue {
          System.out.println(addBurgerCount + " burgers added to the existing stock.");
       }
    }
+
+   /**
+    * Mehtod to sort customer names alphabatically.
+    */
+   public void sortCustomerNameList() {
+
+      Arrays.fill(customerNameList,"");
+      Arrays.sort(customerNameList);
+
+      // Print the sorted customer names
+      System.out.println("Sorted Customer Names:");
+      for (String name : customerNameList) {
+         if (name != "" && !name.isEmpty()) {
+            System.out.println(name);
+         }
+      }
+   }
 }
+
