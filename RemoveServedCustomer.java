@@ -30,22 +30,10 @@ public class RemoveServedCustomer extends RemoveCustomerFromQueue{
 
         foodQueue.setBurgerStock(foodQueue.getBurgetStock() - 5);
 
-//        if(removeCustomerFromQueue.customerRemoved){
-//            switch (removeCustomerFromQueue.cashierNumber){
-//                case 0 -> cashier01Revenue++;
-//                case 1 -> cashier02Revenue++;
-//                case 2 -> cashier03Revenue++;
-//            }
+//        if(customerRemoved){
+//            if(cashierNumber == 0) cashier01Revenue++;
+//            else if(cashierNumber == 1) cashier02Revenue++;
+//            else if(cashierNumber == 3) cashier03Revenue++;
 //        }
-
-        if(customerRemoved){
-            if(cashierNumber == 0) cashier01Revenue++;
-            else if(cashierNumber == 1) cashier02Revenue++;
-            else if(cashierNumber == 3) cashier03Revenue++;
-        }
-
-        cashier01Revenue = this.cashier01Revenue;
-        cashier02Revenue = this.cashier02Revenue;
-        cashier03Revenue = this.cashier03Revenue;
     }
 }

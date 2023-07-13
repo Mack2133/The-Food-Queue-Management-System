@@ -9,22 +9,15 @@ public class Customer {
      */
     private final String customerFName;
     private final String customerLName;
-    private final String burgerCount;
+    private final int burgerCount;
 
     /**
-     * default constractor
+     * constractor with...
      */
-    public Customer(){
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Enter first name: ");
-        this.customerFName = scanner.nextLine();
-
-        System.out.print("Enter last name: ");
-        this.customerLName = scanner.nextLine();
-
-        System.out.print("Enter burger count: ");
-        this.burgerCount = scanner.nextLine();
+    public Customer(String customerFName,String customerLName,int burgerCount){
+        this.customerFName = customerFName;
+        this.customerLName = customerLName;
+        this.burgerCount = burgerCount;
     }
 
     /**
@@ -55,7 +48,7 @@ public class Customer {
      * getter for getting burget count.
      * @return
      */
-    public String getBurgerCount() {
+    public int getBurgerCount() {
         return burgerCount;
     }
 }
