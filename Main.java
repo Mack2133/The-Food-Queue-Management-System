@@ -8,7 +8,7 @@ public class Main {
         FoodQueue foodQueue = new FoodQueue();
 
         // warning message if the stock of the burgers went lower than 10 pieces.
-        if (foodQueue.getBurgetStock() < 10) {
+        if (foodQueue.getBurgerStock() < 10) {
             System.out.println("Burger count is going less than 10.Please refill.");
         }
 
@@ -19,13 +19,14 @@ public class Main {
                 "ACQ or 102 : Add customer to a Queue.",
                 "RCQ or 103 : Remove a customer from a Queue. (From a specific location)",
                 "RSC or 104 : Remove a served customer.",
-                "VCS or 105 : View Customers Sorted in alphabetical order (Do not use library sort routine).",
+                "VCS or 105 : View Customers Sorted in alphabetical order",
                 "SPD or 106 : Store Program Data into file.",
                 "LPD or 107 : Load Program Data from file.",
                 "STK or 108 : View Remaining burgers Stock.",
                 "AFS or 109 : Add burgers to Stock.",
                 "IFQ or 110 : Income of each queue.",
                 "EXT or 999 : Exit the Program."
+
         };
 
         for (String option : allOptionsList) {
@@ -58,9 +59,13 @@ public class Main {
                         foodQueue.removeCustomerFromQueue();
                     }
 
-                    case "RSC", "104" -> {}
+                    case "RSC", "104" -> {
+                        foodQueue.removeServedCustomer();
+                    }
 
-                    case "VCS", "105" -> {}
+                    case "VCS", "105" -> {
+                        foodQueue.sortCustomerNameList();
+                    }
 
                     case "SPD", "106" -> {
                         foodQueue.saveDate();
@@ -71,14 +76,16 @@ public class Main {
                     }
 
                     case "STK", "108" -> {
-                        foodQueue.remainingBurgersCount();
+                        System.out.println("Remaining Burgers Stock: " + foodQueue.getBurgerStock());
                     }
 
                     case "AFS", "109" -> {
                         foodQueue.addBurgersToStock();
                     }
 
-                    case "IFQ or 110" -> {}
+                    case "IFQ", "110" -> {
+                        foodQueue.cashierIncome();
+                    }
 
                     default -> {
                         System.out.println("Enter a valid input.");
